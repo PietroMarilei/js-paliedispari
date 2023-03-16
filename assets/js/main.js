@@ -87,23 +87,23 @@ if (userChoice == flag) {
 
 
 
-// tenativo quasi riuscito di usare il for per girare la parola
-const userWord = prompt("inserisci la parola")
+// // tenativo quasi riuscito di usare il for per girare la parola
+// const userWord = prompt("inserisci la parola")
 
-function reverser(word) {
-    let reversedStr
-    for (let i = word.length; i >= 0; i--) {
-        reversedStr = reversedStr + word[i];
-    }
+// function reverser(word) {
+//     let reversedStr
+//     for (let i = word.length; i >= 0; i--) {
+//         reversedStr = reversedStr + word[i];
+//     }
 
-    return reversedStr
-}
-// ho dichiarato la funzione prende la parola, la rigira
+//     return reversedStr
+// }
+// // ho dichiarato la funzione prende la parola, la rigira
 
 
-const resultOfReverser = reverser(userWord)
+// const resultOfReverser = reverser(userWord)
 
-// uso la funzione e mi salvo il suo risultato in una variabile che poi posso richiamare
+// // uso la funzione e mi salvo il suo risultato in una variabile che poi posso richiamare
 
-console.log(resultOfReverser);
+// console.log(resultOfReverser);
 
