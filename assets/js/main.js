@@ -2,29 +2,27 @@
 
 
 
-// const userWord = prompt("inserisci la parola")
+const userWord = prompt("inserisci la parola")
 
-// function reverser(word) {
+function reverserIsPal(word) {
+    const reverseWord = Array.from(word).reverse().join();
+    console.log(`questa é la rpola dell'utente ${word}`);
+    console.log(`questa é la parola rovesciata ${reverseWord}`);
 
-//     const reverseWord = Array.from(word).reverse().join();
-//      console.log(word);
-//      console.log(reverseWord);
-
-//     if (reverseWord == word) {
-//         return true
-//     }
-
-//     return false
-
-// }
-// // ho dichiarato la funzione
+    if (reverseWord === word) {
+        return true
+    } else {
+        return false
+    }
+}
+// ho dichiarato la funzione prende la parola, la rigira
 
 
-// const resultOfReverser = reverser(userWord)
+const resultOfReverserIsPal = reverserIsPal(userWord)
 
-// // uso la funzione e mi salvo il suo risultato in una variabile che poi posso richiamare
+// uso la funzione e mi salvo il suo risultato in una variabile che poi posso richiamare
 
-// console.log(resultOfReverser);
+console.log(resultOfReverserIsPal);
 
 // ----------------------------------------------------------------------------------
 
