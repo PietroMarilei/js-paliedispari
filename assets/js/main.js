@@ -26,7 +26,7 @@
 
 // ----------------------------------------------------------------------------------
 
-// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random(sempre da 1 a 5) per il computer(usando una funzione).Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione) Dichiariamo chi ha vinto.
+// // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random(sempre da 1 a 5) per il computer(usando una funzione).Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione) Dichiariamo chi ha vinto.
 
 
 const userChoice = prompt("scegli pari o dispari");
@@ -84,4 +84,26 @@ if (userChoice == flag) {
     console.log("hai perso");
 }
 // ora siccome resultofisEven diventa una stringa chiamata pari o dispari a seconda del risultato se la userChoice corrisponde hai vinto, oppure hai perso.
+
+
+
+// tenativo quasi riuscito di usare il for per girare la parola
+const userWord = prompt("inserisci la parola")
+
+function reverser(word) {
+    let reversedStr
+    for (let i = word.length; i >= 0; i--) {
+        reversedStr = reversedStr + word[i];
+    }
+
+    return reversedStr
+}
+// ho dichiarato la funzione prende la parola, la rigira
+
+
+const resultOfReverser = reverser(userWord)
+
+// uso la funzione e mi salvo il suo risultato in una variabile che poi posso richiamare
+
+console.log(resultOfReverser);
 
