@@ -55,17 +55,30 @@
 // }
 
 const oddEl = document.getElementById('userOddEven');
-const inputEl = document.getElementById('userOddEven');
+const inputEl = document.getElementById('userInput');
 const buttonEl = document.querySelector('button');
+
+let even = false;
 
 function randomNumbGenerator(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
 buttonEl.addEventListener('click', function () {
     const enemyNumber = randomNumbGenerator(1, 5);
-    console.log('enemy numb', enemyNumber);
+    const userInput = parseInt(inputEl.value);
 
-    const userInput = inputEl.value;
+    console.log('enemy numb', enemyNumber);
+    console.log('user numb', userInput);
+
+    if ((userInput + enemyNumber % 2) == 0) {
+        console.log('pari');
+        even = true
+    } else {
+        console.log('dispari');
+        even = false
+    }
 
 
 })
