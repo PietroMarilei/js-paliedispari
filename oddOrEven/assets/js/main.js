@@ -64,6 +64,15 @@ function randomNumbGenerator(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function sum(num1, num2) {
+    let sum = num1 + num2;
+    return sum;
+}
+
+function oddOrEven(numb) {
+    (numb % 2) == 0 ? true : false;
+}
+
 
 buttonEl.addEventListener('click', function () {
     const enemyNumber = randomNumbGenerator(1, 5);
@@ -72,13 +81,16 @@ buttonEl.addEventListener('click', function () {
     console.log('enemy numb', enemyNumber);
     console.log('user numb', userInput);
 
-    if ((userInput + enemyNumber % 2) == 0) {
-        console.log('pari');
-        even = true
-    } else {
-        console.log('dispari');
-        even = false
-    }
+    // if (((userInput + enemyNumber) % 2) == 0) {
+    //     console.log('pari');
+    //     even = true
+    // } else {
+    //     console.log('dispari');
+    //     even = false
+    // }
+
+    const sum = sum(enemyNumber, userInput);
+    console.log(sum);
 
 
 })
