@@ -54,25 +54,25 @@
 //     console.log("hai perso");
 // }
 
-const oddEl = document.getElementById('userOddEven');
+const oddEl = document.getElementById('oddOrEven');
+const evenEl = document.getElementById('even');
 const inputEl = document.getElementById('userInput');
 const buttonEl = document.querySelector('button');
-
-let even = false;
 
 function randomNumbGenerator(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function sum(num1, num2) {
-    let sum = num1 + num2;
-    return sum;
+    return num1 + num2;
 }
 
 function oddOrEven(numb) {
-    (numb % 2) == 0 ? true : false;
+    return (numb % 2) == 0 ? true : false;
 }
 
+
+// -----------------------------------
 
 buttonEl.addEventListener('click', function () {
     const enemyNumber = randomNumbGenerator(1, 5);
@@ -81,16 +81,22 @@ buttonEl.addEventListener('click', function () {
     console.log('enemy numb', enemyNumber);
     console.log('user numb', userInput);
 
-    // if (((userInput + enemyNumber) % 2) == 0) {
-    //     console.log('pari');
-    //     even = true
-    // } else {
-    //     console.log('dispari');
-    //     even = false
-    // }
+    let sumOfBoth = sum(enemyNumber, userInput);
+    console.log('somma dei due numeri', sumOfBoth);
 
-    const sum = sum(enemyNumber, userInput);
-    console.log(sum);
+    console.log('la somma è pari? ', oddOrEven(sumOfBoth));
+    console.log('user sceglie pari o dispari? ', Boolean(oddEl.value));
+
+
+    if ((oddOrEven(sumOfBoth) && oddEl.value) || (!oddOrEven(sumOfBoth) && !oddEl.value)) {
+        console.log('hai vinto');
+        // document.querySelector('body').innerHTML = 'hai vinto'
+    } else {
+        console.log('hai perso');
+        // document.querySelector('body').innerHTML = 'la hai perso '
+    }
+
+
 
 
 })

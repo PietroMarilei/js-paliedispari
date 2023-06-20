@@ -13,9 +13,13 @@
             crossorigin="anonymous">
         <title>Document</title>
     </head>
-    <body class="bg-secondary text-center py-5 d-flex">
-        <label for="userOddEven">Scegli Pari o Dispari</label><br>
-        <input id="userOddEven" type="text">
+    <body class="bg-secondary text-center py-5 d-flex justify-content-around">
+
+        <label for="odd">Scegli Pari </label><br>
+        <select name="oddOrEven" id="oddOrEven">
+            <option value="true">Pari</option>
+            <option value="false">Dispari</option>
+        </select>
 
         <label for="userInput">Scegli un numero da 1 a 5</label><br>
         <input id="userInput" type="text">
