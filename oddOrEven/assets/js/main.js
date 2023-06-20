@@ -54,4 +54,18 @@
 //     console.log("hai perso");
 // }
 
+const oddEl = document.getElementById('userOddEven');
+const inputEl = document.getElementById('userOddEven');
+const buttonEl = document.querySelector('button');
 
+function randomNumbGenerator(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+buttonEl.addEventListener('click', function () {
+    const enemyNumber = randomNumbGenerator(1, 5);
+    console.log('enemy numb', enemyNumber);
+
+    const userInput = inputEl.value;
+
+
+})
